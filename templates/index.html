@@ -5,10 +5,14 @@
 {% endblock meta %}
 
 {% block content %}
-<form class="Form" autocomplete="off">
+<form class="Form" autocomplete="off" method="POST" action="/result">
     <div class="input-animated">
-      <input type="text" id="name" required placeholder="the placeholder"/>
-      <label htmlFor="password" class="label-name"><span class="content-name">Password</span></label>  
+      {{ form.hidden_tag() }}
+      {{ form.password.label(class="label-name")}}
+      {{ form.password() }}
     </div>
+    <div>
+    {{ form.submit() }}
+    <div>
 </form>
 {% endblock content %}
