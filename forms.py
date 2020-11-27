@@ -3,5 +3,5 @@ from wtforms import PasswordField, SubmitField
 from wtforms.validators import DataRequired
 
 class PasswordForm(FlaskForm):
-    password = PasswordField('Password', validators=[DataRequired()])
-    submit = SubmitField('Wack')
+    password = PasswordField('Check for your Password', validators=[DataRequired()])
+    submit = SubmitField('Wacked ?')

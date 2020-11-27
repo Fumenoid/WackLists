@@ -2,7 +2,7 @@
 
 :root {
     /*  MAIN COLOURS  */
-      --primary-dark: #111111;
+      --primary-dark: black;
       --primary-light: #ffffff;
     
     /*  STATUS COLOURS  */
@@ -18,8 +18,18 @@
     
     body {  
       background: var(--primary-dark);
+      font-family: Arial, Helvetica, sans-serif; 
+	    font-size: large;
       display: flex;
       justify-content: center;
+    }
+
+    .vertical-center {
+      min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+      min-height: 100vh; /* These two lines are counted as one :-)       */
+    
+      display: flex;
+      align-items: center;
     }
     
     .Form {
@@ -35,6 +45,16 @@
     input,
     textarea {
       background-color: transparent;
+    }
+    
+    .imgcontainer {
+      text-align: center;
+    }
+    
+    img.alt {
+      width: 40%;
+      height: 30%;
+      border-radius: 20%;
     }
     
     
