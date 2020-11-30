@@ -5,14 +5,20 @@
 {% endblock meta %}
 
 {% block content %}
+<div class="container-sm mx-auto w-50 align-middle">
 <form class="Form" autocomplete="off" method="POST" action="/result">
-    <div class="input-animated">
+    <div class="imgcontainer">
+      <img src="{{ url_for('static', filename='WackLists.gif') }}" alt="Image" class="alt">
+    </div>
+    <div class="input-animated w-75 mx-auto">
       {{ form.hidden_tag() }}
-      {{ form.password.label(class="label-name")}}
+      {{ form.password.label(class="label-name") }}
       {{ form.password() }}
     </div>
-    <div>
-    {{ form.submit() }}
+    <div class="w-75 mx-auto">
+    {{ form.submit(class="btn btn-dark") }}
     <div>
 </form>
+</div>
+<!--Maybe will fix front end for mobile devices later. If you wanna help, contribute at https://github.com/Fumenoid/WackLists-->
 {% endblock content %}
